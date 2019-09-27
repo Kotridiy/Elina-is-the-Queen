@@ -1,0 +1,11 @@
+D:\Сейф\С#\Elina is the Queen\Generate map data\bin\Debug\Generate map data.exe.config
+D:\Сейф\С#\Elina is the Queen\Generate map data\bin\Debug\Generate map data.exe
+D:\Сейф\С#\Elina is the Queen\Generate map data\bin\Debug\Generate map data.pdb
+D:\Сейф\С#\Elina is the Queen\Generate map data\bin\Debug\Elina is the Queen.exe
+D:\Сейф\С#\Elina is the Queen\Generate map data\bin\Debug\Elina is the Queen.pdb
+D:\Сейф\С#\Elina is the Queen\Generate map data\bin\Debug\Elina is the Queen.exe.config
+D:\Сейф\С#\Elina is the Queen\Generate map data\obj\Debug\Generate map data.csproj.CoreCompileInputs.cache
+D:\Сейф\С#\Elina is the Queen\Generate map data\obj\Debug\Generate map data.exe
+D:\Сейф\С#\Elina is the Queen\Generate map data\obj\Debug\Generate map data.pdb
+D:\Сейф\С#\Elina is the Queen\Generate map data\obj\Debug\Generate map data.csprojAssemblyReference.cache
+D:\Сейф\С#\Elina is the Queen\Generate map data\obj\Debug\Generate map data.csproj.CopyComplete
