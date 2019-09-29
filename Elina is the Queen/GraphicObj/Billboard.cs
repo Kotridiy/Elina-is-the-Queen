@@ -66,7 +66,7 @@ namespace Elina_is_the_Queen
             }
         }
 
-        public void ChangeText(string newText, int newSize = 0)
+        public void ChangeText(string newText, float newSize = 0)
         {
             text = newText;
             if (newSize > 0)

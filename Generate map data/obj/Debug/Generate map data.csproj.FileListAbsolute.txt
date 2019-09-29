@@ -8,3 +8,4 @@ D:\Сейф\С#\Elina is the Queen\Generate map data\obj\Debug\Generate map data
 D:\Сейф\С#\Elina is the Queen\Generate map data\obj\Debug\Generate map data.pdb
 D:\Сейф\С#\Elina is the Queen\Generate map data\obj\Debug\Generate map data.csprojAssemblyReference.cache
 D:\Сейф\С#\Elina is the Queen\Generate map data\obj\Debug\Generate map data.csproj.CopyComplete
+D:\Сейф\С#\Elina is the Queen\Generate map data\bin\Debug\map.dat

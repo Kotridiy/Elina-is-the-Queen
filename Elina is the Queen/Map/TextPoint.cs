@@ -50,9 +50,9 @@ namespace Elina_is_the_Queen
         public TextPoint(string table, string alter, int colors, int ownNumber, int yesNumber, int noNumber, int alterNumber, float size)
             : this(table, alter, colors, ownNumber, yesNumber, noNumber, alterNumber, size, false) { } // Точка с альтернативным ответом и размером
         public TextPoint(string mainText, int colors, int number)
-            : this(mainText, "", colors, number, 0, 0, 0, Palitra.font.Size, true) { } // Финальная точка
+            : this(mainText, "Закончить", colors, number, 0, 0, 0, Palitra.font.Size, true) { } // Финальная точка
         public TextPoint(string mainText, int colors, int number, float size)
-            : this(mainText, "", colors, number, 0, 0, 0, size, true) { } // Финальная точка с размером
+            : this(mainText, "Закончить", colors, number, 0, 0, 0, size, true) { } // Финальная точка с размером
 
         protected TextPoint(SerializationInfo info, StreamingContext context)
         {

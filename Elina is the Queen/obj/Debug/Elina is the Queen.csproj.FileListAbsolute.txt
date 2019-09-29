@@ -7,3 +7,4 @@ D:\Сейф\С#\Elina is the Queen\Elina is the Queen\obj\Debug\Elina is the Que
 D:\Сейф\С#\Elina is the Queen\Elina is the Queen\obj\Debug\Elina is the Queen.pdb
 D:\Сейф\С#\Elina is the Queen\Elina is the Queen\obj\Debug\Elina_is_the_Queen.MainForm.resources
 D:\Сейф\С#\Elina is the Queen\Elina is the Queen\obj\Debug\Elina is the Queen.csprojAssemblyReference.cache
+D:\Сейф\С#\Elina is the Queen\Elina is the Queen\bin\Debug\map.dat

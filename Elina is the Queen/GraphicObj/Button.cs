@@ -15,8 +15,8 @@ namespace Elina_is_the_Queen
         RectangleF      textRect;
         Brush           textBrush;
         Font            font;
-        string          extraText;
         Point           mousePoint;
+        Matrix          offset = new Matrix();
         bool            visible;
 
         Button(Colors colors)
@@ -27,7 +27,7 @@ namespace Elina_is_the_Queen
             pen = new Pen(colors.buttonLines, 4);
         }
 
-        public Button(Colors colors, int type, bool visible = true) : this(colors)
+        public Button(Colors colors, int type, bool visible = true, string text = "") : this(colors)
         {
             this.visible = visible;
             switch (type)
@@ -56,7 +56,7 @@ namespace Elina_is_the_Queen
                                                     new Point(start.X, start.Y+100),
                                                     new Point(start.X, start.Y+50)
                         });
-                        text = "Да";
+                        this.text = "Да";
                         textRect = new Rectangle(start.X + 10, start.Y + 15, 90, 70);
                         break;
                     }
@@ -84,7 +84,7 @@ namespace Elina_is_the_Queen
                                                     new Point(start.X, start.Y+100),
                                                     new Point(start.X, start.Y+50)
                         });
-                        text = "Нет";
+                        this.text = "Нет";
                         textRect = new Rectangle(start.X + 110, start.Y + 15, 90, 70);
                         break;
                     }
@@ -94,7 +94,7 @@ namespace Elina_is_the_Queen
                         gpath = new GraphicsPath();
                         Point start = new Point(225, 325);
                         gpath.AddRectangle(new Rectangle(start.X, start.Y, 200, 100));
-                        text = "Пошёл в попу урод этакий";
+                        this.text = text;
                         textRect = new Rectangle(start.X + 20, start.Y + 25, 160, 50);
                         break;
                     }
@@ -112,14 +112,18 @@ namespace Elina_is_the_Queen
         {
             if (!visible) return;
 
-            e.DrawPath(pen, gpath);
+            GraphicsPath path = (GraphicsPath)gpath.Clone();
 
-            e.FillPath(mainBrush, gpath);
+            path.Transform(offset);
+            e.DrawPath(pen, path);
+            e.FillPath(mainBrush, path);
 
             StringFormat sformat = new StringFormat();
             sformat.Alignment = StringAlignment.Center;
             sformat.LineAlignment = StringAlignment.Center;
-            e.DrawString(text, font, textBrush, textRect, sformat);
+            RectangleF rect = new RectangleF(textRect.Location, textRect.Size);
+            rect.Offset(offset.OffsetX, offset.OffsetY);
+            e.DrawString(text, font, textBrush, rect, sformat);
         }
 
         public void ChangeColor(Colors colors)
@@ -127,6 +131,14 @@ namespace Elina_is_the_Queen
             mainBrush = new SolidBrush(colors.buttonColor);
             textBrush = new SolidBrush(colors.textColor);
             pen = new Pen(colors.buttonLines, pen.Width);
+        }
+
+        public void ChangeAlterText(string text)
+        {
+            if (answer == 3)
+            {
+                this.text = text;
+            }
         }
 
         public int Click(MouseEventArgs mouse)
@@ -144,21 +156,20 @@ namespace Elina_is_the_Queen
         {
             if (!visible) return;
 
-            if (gpath.IsVisible(mouse.X, mouse.Y))
+            if (gpath.IsVisible(mouse.X + offset.OffsetX, mouse.Y + offset.OffsetY))
             {
-                extraText = text;
-                text = "Эй!";
+                offset.Reset();
+                offset.Translate(1, 5);
             }
             mousePoint = mouse.Location;
+            mousePoint.Offset((int)offset.OffsetX, (int)offset.OffsetY);
         }
 
         public void MouseUp(MouseEventArgs mouse)
         {
-            if (!visible) return;
-
             if (gpath.IsVisible(mousePoint))
             {
-                text = extraText;
+                offset.Reset();
             }
         }
     }
