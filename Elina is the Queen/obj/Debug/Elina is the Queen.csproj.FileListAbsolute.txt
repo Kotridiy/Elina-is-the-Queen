@@ -3,7 +3,6 @@ D:\Сейф\С#\Elina is the Queen\Elina is the Queen\bin\Debug\Elina is the Que
 D:\Сейф\С#\Elina is the Queen\Elina is the Queen\bin\Debug\Elina is the Queen.pdb
 D:\Сейф\С#\Elina is the Queen\Elina is the Queen\obj\Debug\Elina_is_the_Queen.Properties.Resources.resources
 D:\Сейф\С#\Elina is the Queen\Elina is the Queen\obj\Debug\Elina is the Queen.csproj.GenerateResource.Cache
-D:\Сейф\С#\Elina is the Queen\Elina is the Queen\obj\Debug\Elina is the Queen.csproj.CoreCompileInputs.cache
 D:\Сейф\С#\Elina is the Queen\Elina is the Queen\obj\Debug\Elina is the Queen.exe
 D:\Сейф\С#\Elina is the Queen\Elina is the Queen\obj\Debug\Elina is the Queen.pdb
 D:\Сейф\С#\Elina is the Queen\Elina is the Queen\obj\Debug\Elina_is_the_Queen.MainForm.resources

@@ -65,7 +65,7 @@ namespace Elina_is_the_Queen
             if (this[item.Number] != null)
                 throw new Exception("Point with this index is exist yet");
 
-            if (item.Number == 0 || Points.Exists((elem) => elem.nextTo(1) != 0 || elem.nextTo(2) != 0 || elem.nextTo(3) != 0))
+            if (item.Number == 0 || Points.Exists((elem) => elem.NextTo(1) != 0 || elem.NextTo(2) != 0 || elem.NextTo(3) != 0))
             {
                 Points.Add(item);
             }
@@ -107,20 +107,20 @@ namespace Elina_is_the_Queen
 
             Points.Remove(item);
 
-            if (item.nextTo(1) != 0 && !Points.Exists((elem) => item.nextTo(1) == elem.nextTo(1) ||
-                                                                item.nextTo(1) == elem.nextTo(2) ||
-                                                                item.nextTo(1) == elem.nextTo(3)))
-                Remove(this[item.nextTo(1)]);
+            if (item.NextTo(1) != 0 && !Points.Exists((elem) => item.NextTo(1) == elem.NextTo(1) ||
+                                                                item.NextTo(1) == elem.NextTo(2) ||
+                                                                item.NextTo(1) == elem.NextTo(3)))
+                Remove(this[item.NextTo(1)]);
 
-            if (item.nextTo(2) != 0 && !Points.Exists((elem) => item.nextTo(2) == elem.nextTo(1) ||
-                                                                item.nextTo(2) == elem.nextTo(2) ||
-                                                                item.nextTo(2) == elem.nextTo(3)))
-                Remove(this[item.nextTo(2)]);
+            if (item.NextTo(2) != 0 && !Points.Exists((elem) => item.NextTo(2) == elem.NextTo(1) ||
+                                                                item.NextTo(2) == elem.NextTo(2) ||
+                                                                item.NextTo(2) == elem.NextTo(3)))
+                Remove(this[item.NextTo(2)]);
 
-            if (item.nextTo(3) != 0 && !Points.Exists((elem) => item.nextTo(3) == elem.nextTo(1) ||
-                                                                item.nextTo(3) == elem.nextTo(2) ||
-                                                                item.nextTo(3) == elem.nextTo(3)))
-                Remove(this[item.nextTo(3)]);
+            if (item.NextTo(3) != 0 && !Points.Exists((elem) => item.NextTo(3) == elem.NextTo(1) ||
+                                                                item.NextTo(3) == elem.NextTo(2) ||
+                                                                item.NextTo(3) == elem.NextTo(3)))
+                Remove(this[item.NextTo(3)]);
 
             return true;
         }
@@ -154,7 +154,7 @@ namespace Elina_is_the_Queen
                 }
                 else
                 {
-                    curPoint = collection[curIndex];
+                    curPoint = collection.Points[curIndex];
                 }
                 return true;
             }
@@ -168,7 +168,7 @@ namespace Elina_is_the_Queen
 
         public string Preview(TextPoint point, int ans)
         {
-            TextPoint nextPoint = this[point.nextTo(ans)];
+            TextPoint nextPoint = this[point.NextTo(ans)];
             string substring;
             if (nextPoint.TableText.Length >= 10) substring = nextPoint.TableText.Substring(0, 11) + "...";
             else substring = nextPoint.TableText;

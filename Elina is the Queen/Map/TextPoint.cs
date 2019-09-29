@@ -90,7 +90,7 @@ namespace Elina_is_the_Queen
         public int ColorPack { get => colorPack; }
         public float TextSize { get => textSize; }
 
-        public int nextTo(int answer)
+        public int NextTo(int answer)
         {
             if (!final)
             {
@@ -115,7 +115,7 @@ namespace Elina_is_the_Queen
             else return -1;
         }
 
-        public bool IsFinal() { return final; }
+        public bool IsFinal { get => final; }
 
         public bool IsPathEmpty()
         {
